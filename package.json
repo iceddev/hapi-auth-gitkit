@@ -1,0 +1,28 @@
+{
+  "name": "hapi-auth-gitkit",
+  "version": "0.0.0",
+  "description": "Hapi plugin providing a Google Identity Toolkit scheme",
+  "author": "Blaine Bublitz <blaine@iceddev.com> (http://iceddev.com)",
+  "contributors": [],
+  "repository": "iceddev/hapi-auth-gitkit",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "lab -cvL"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "auth",
+    "authentication",
+    "gitkit",
+    "hapi"
+  ]
+}
