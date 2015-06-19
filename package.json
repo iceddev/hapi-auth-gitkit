@@ -1,6 +1,6 @@
 {
   "name": "hapi-auth-gitkit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Hapi plugin providing a Google Identity Toolkit scheme",
   "author": "Blaine Bublitz <blaine@iceddev.com> (http://iceddev.com)",
   "contributors": [],
