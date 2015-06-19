@@ -17,7 +17,10 @@
   "scripts": {
     "test": "lab -cvL"
   },
-  "dependencies": {},
+  "dependencies": {
+    "boom": "^2.8.0",
+    "gitkitclient": "0.0.2"
+  },
   "devDependencies": {},
   "keywords": [
     "auth",
