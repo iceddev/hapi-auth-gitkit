@@ -39,7 +39,7 @@ server.register(require('hapi-auth-gitkit'), function(err){
 Without a custom Gitkit client
 
 ```js
-server.register(require('hapi-auth-basic'), function (err) {
+server.register(require('hapi-auth-gitkit'), function(err){
 
   server.auth.strategy('gitkit', 'gitkit', {
     // Cookie name of auth token
