@@ -21,7 +21,14 @@
     "boom": "^2.8.0",
     "gitkitclient": "0.0.2"
   },
-  "devDependencies": {},
+  "peerDependencies": {
+    "hapi": "^8.0.0"
+  },
+  "devDependencies": {
+    "code": "^1.4.1",
+    "hapi": "^8.6.1",
+    "lab": "^5.10.0"
+  },
   "keywords": [
     "auth",
     "authentication",

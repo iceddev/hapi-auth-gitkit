@@ -4,6 +4,8 @@ var boom = require('boom');
 var GitkitClient = require('gitkitclient');
 
 function gitkitScheme(server, opts){
+  opts = opts || {};
+
   var cookieKey = opts.cookieName || opts.cookie || 'gtoken';
 
   var gitkitClient;
@@ -15,15 +17,14 @@ function gitkitScheme(server, opts){
 
   return {
     authenticate: function(request, reply){
-
       if(!request.state[cookieKey]){
-        reply(boom.unauthorized(null, 'Gitkit'));
+        reply(boom.unauthorized('Missing token cookie', 'Gitkit'));
         return;
       }
 
       gitkitClient.verifyGitkitToken(request.state[cookieKey], function(err, credentials){
         if(err){
-          reply(err);
+          reply(boom.unauthorized('Invalid token', 'Gitkit'));
           return;
         }
 
@@ -33,9 +34,7 @@ function gitkitScheme(server, opts){
   };
 }
 
-
 function hapiAuthGitkit(server, opts, done){
-
   server.auth.scheme('gitkit', gitkitScheme);
   done();
 }
